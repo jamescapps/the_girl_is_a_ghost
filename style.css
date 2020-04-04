@@ -36,46 +36,44 @@ img {
     padding-top: 10%;
 }
 
-.fa-envelope {
-    color: white;
-   padding: 0px 70px;
-}
-
-#contact {
-    text-align: center;
-}
-
 .navbar__btn{
+    display: none;
     position: absolute;
     z-index:2;
     cursor: pointer;
-    display: none;
-    right: 1%;
-    top: 1%;
-}
-
-.navbar__btn:hover {
-   color: white;
+    /*right: 4%;
+    top: 2%;*/
+    top: 50%;
+    left: 46%;
+    color: white;
 }
 
 .bar1, .bar2, .bar3  {
+    display:none;
     width: 30px;
-    height: 5px;
+    height: 2px;
     margin: 0.5rem;
     background: white;
     transition: all .75s ease;
 }
 
+.change .ghost {
+    display: none;
+}
+
 .change .bar2 {
-    transform: rotate(45deg) translateY(0px)
+    display: block;
+    transform: rotate(45deg) translateY(5px)
 }
 
 .change .bar1 {
+    display: block;
     opacity: 0;
 }
 
 .change .bar3 {
-    transform: rotate(135deg) translateY(10px) translateX(-9px)
+    display: block;
+    transform: rotate(135deg) translateY(7px) translateX(-2px)
 }
 
 .navbar__links {
@@ -84,6 +82,7 @@ img {
     height: 0;
     overflow: hidden;
     text-align: center;
+    padding-top: 125px;
 }
 
 .navbar__collapse {
@@ -97,10 +96,7 @@ img {
     color: white;
     transition: all 1s ease;
     cursor: pointer;
- 
 }
-
-
 
 @media screen and (max-width: 1275px) {
     li {
@@ -109,22 +105,10 @@ img {
     .dekstop_nav {
         padding: 100px;
     }
-    .fa-envelope {
-        font-size: 1.5rem;
-    }
-}
-
-@media screen and (max-width: 885px) {
-    li {
-        font-size: .75rem;
-    }
 }
 
 @media screen and (max-width: 785px) {
     .dekstop_nav {
-        display: none;
-    }
-    #contact {
         display: none;
     }
     img {
@@ -133,13 +117,9 @@ img {
     .navbar__btn {
         display: block;
     }
-    .menu {
-        display: block;
-    }
     li {
         display: block;
         padding: 20px;
-        font-size: .5rem;
     }
 }
 
