@@ -1,0 +1,302 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /*background-color: #f5f6f7;*/
+    background-color: rgb(0, 0, 0);
+}
+
+ul {
+    list-style-type: none;
+}
+
+li {
+    display: inline;
+    font-size: 2rem;
+    padding: 80px;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+.dekstop_nav {
+    display: block;
+    text-align: center;
+    padding: 70px;
+}
+img {
+    width: 45%;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 1%;
+}
+
+.navbar__btn{
+    display: none;
+    position: absolute;
+    z-index:2;
+    cursor: pointer;
+    /*right: 4%;
+    top: 2%;*/
+    top: 50%;
+    left: 45%;
+    color: white;
+}
+
+.bar1, .bar2, .bar3  {
+    display:none;
+    width: 25px;
+    height: 2px;
+    margin: 0.5rem;
+    background: white;
+    transition: all .75s ease;
+}
+
+.change .ghost {
+    display: none;
+}
+
+.change .bar2 {
+    display: block;
+    transform: rotate(45deg) translateY(5px)
+}
+
+.change .bar1 {
+    display: block;
+    opacity: 0;
+}
+
+.change .bar3 {
+    display: block;
+    transform: rotate(135deg) translateY(7px) translateX(-2px)
+}
+
+.navbar__links {
+    list-style-type: none;
+    transition: all 2s ease;
+    height: 0;
+    overflow: hidden;
+    text-align: center;
+    margin-top: 25%;
+}
+
+.navbar__collapse {
+    height: 305px;
+}
+
+.navbar__single-link {
+    padding: .5rem;
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: white;
+    transition: all 1s ease;
+    cursor: pointer;
+}
+
+/* container for music player */
+.container {
+    position: absolute;
+    height: 300pt;
+    width: 250pt;
+    margin: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #000000;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #000000;
+}
+
+/* album cover */
+#thumbnail {
+    position: absolute;
+    top: 36%;
+    left:25%;
+    transition: 1s;
+    z-index: 3;
+}
+
+/* track artist */
+.song-artist {
+    position: absolute;
+    z-index: 4;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+    bottom: 21%;
+    left: 28%;
+}
+
+/* track title */
+.song-title {
+    position: absolute;
+    z-index: 4;
+    color: white;
+    font-family: monospace;
+    font-size: 17px;
+    bottom: 16%;
+    left: 28%;
+}
+
+/* style for play and pause images */
+#play-pause {
+    position: absolute;
+    height: 50px;
+    width: 50px;
+    filter: invert(1);
+    cursor: pointer;
+    bottom: 15%;
+    z-index: 4;
+    font-size: 53px;
+    left: 9%;
+    color: white;
+}
+
+/* style for next and previous song images */
+#next-song, #previous-song {
+    position: absolute;
+    height: 30px;
+    width: 30px;
+    filter: invert(1);
+    cursor: pointer;
+    bottom: 13.5%;
+    font-size: 40px;
+    z-index: 4;
+    color: white;
+}
+
+/* unique style for next song image */
+#next-song {
+    right: 10%;
+}
+
+/* unique style for previous song image */
+#previous-song {
+    right: 10.3%;
+    bottom: 21.5%;
+}
+
+/* style for current time of the track */
+.currentTime {
+    position: absolute;
+    height: 50px;
+    width: 50px;
+    cursor: pointer;
+    bottom: -7.5%;
+    left: 17%;
+    z-index: 4;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 13px;
+    color: white;
+    align-items: center;
+}
+
+/* style for the total length of the track */
+.durationTime {
+    position: absolute;
+    height: 50px;
+    width: 50px;
+    cursor: pointer;
+    bottom: -1%;
+    right: 11%;
+    z-index: 4;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 13px;
+    align-items: center;
+    color: black;
+}
+
+/* style for the progress bar */
+#progress-bar {
+    -webkit-appearance: none;
+    appearance: none;
+    position: absolute;
+    z-index: 4;
+    height: 5px;
+    background: white;
+    width: 160pt;
+    bottom: 5%;
+    border-radius: 30px;
+    left: 17%;
+}
+
+/* style for the progress bar's slider thumb */
+#progress-bar::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    margin-top: -3px;
+    margin-left: 0px;
+    height: 10px;
+    width: 7px;
+    border: 0;
+    background: -webkit-linear-gradient(45deg,  rgb(213, 213, 213), rgb(193, 255, 6));
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+/* style for the progress bar's runnable track */
+#progress-bar::-webkit-slider-runnable-track {
+    -webkit-appearance: none;
+    appearance: none;
+    cursor: pointer;
+    max-height: 5px;
+    border-radius: 30px;
+}
+
+/* style to remove blue shade of the progress bar when clicked on/selected */
+#progress-bar:focus {
+    outline: none;
+}
+
+@media screen and (max-width: 1275px) {
+    li {
+       font-size: 1.5rem;
+    }
+    .dekstop_nav {
+        padding: 100px;
+    }
+}
+
+@media screen and (max-width: 785px) {
+    .dekstop_nav {
+        display: none;
+    }
+    img {
+        padding-top: 40%;
+    }
+    .navbar__btn {
+        display: block;
+    }
+    li {
+
+        padding: 20px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    img {
+        padding-top: 60%;
+    }
+    .navbar__single-link  {
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    img {
+        padding-top: 70%;
+    }
+    .navbar__links {
+        padding-top: 60px;
+    }
+    
+}

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="stylesheet" href="./style.css">
+    <title>GIAG Music</title>
+</head>
+<body>
+    <div id="logo">
+        <img src="../img/inverted_logo_no_specs.jpg" alt="">
+    </div>
+    <nav class = "navbar">
+        <div class="navbar__btn">
+            <div class="ghost"><i class="fas fa-ghost fa-3x"></i></div>
+            <div class="bar bar1"></div>
+            <div class="bar bar2"></div>
+            <div class="bar bar3"></div>            
+        </div>
+        <div class="dekstop_nav">
+            <ul class="desktop_links">
+                <li><a class="desktop_single_links" href=""><i class="fas fa-info"></i></a></li>
+                <li><a class="desktop_single_links" href=""><i class="fas fa-music"></i></a></li>
+                <li><a class="desktop_single_links" href=""><i class="fas fa-video"></i></a></li>
+            </ul>
+        </div>
+        <ul class="navbar__links">
+            <li><a class="navbar__single-link" href=""><i class="fas fa-info"></i></a></li>
+            <li><a class="navbar__single-link" href=""><i class="fas fa-music"></i></a></li>
+            <li><a class="navbar__single-link" href=""><i class="fas fa-video"></i></a></li>
+        </ul>
+    </nav>
+    <audio src="./sounds/asteroid_hits_player.wav" id="song"></audio>
+    <div class="container>">
+        <div class="box"></div>
+
+        <img src="art/west_bottoms_1.jpg" id="thumbnail">
+        <i class="far fa-play-circle" id="play-pause" onclick="playPause()"></i>
+        <i class="fas fa-step-forward" id="next-song" onclick="nextSong()"></i>
+        <i class="fas fa-step-backward" id="previous-song" onclick="previousSong()"></i>
+        
+        <div class="song-artist">The Girl is a Ghost</div>
+        <div class="song-title">Song-title</div>
+
+        <input 
+            type="range"
+            id="progress-bar"
+            min="0"
+            max=""
+            value="0"
+            onchange="changeProgressBar()" />
+
+        <div class="currentTime"></div>
+        <div class="durationTime"></div>
+    </div>
+    <script src="./script.js"></script>
+</body>
