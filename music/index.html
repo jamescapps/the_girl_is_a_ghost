@@ -9,8 +9,8 @@
     <title>GIAG Music</title>
 </head>
 <body>
-    <div id="logo">
-        <img src="../img/inverted_logo_no_specs.jpg" alt="">
+    <div id="logo_img">
+        <img id="logo" src="../img/inverted_logo_no_specs.jpg" alt="">
     </div>
     <nav class = "navbar">
         <div class="navbar__btn">
@@ -34,14 +34,18 @@
     </nav>
     <audio src="./sounds/asteroid_hits_player.wav" id="song"></audio>
     <div class="container>">
-        <div class="box"></div>
-
-        <img src="art/west_bottoms_1.jpg" id="thumbnail">
-        <i class="far fa-play-circle" id="play-pause" onclick="playPause()"></i>
-        <i class="fas fa-step-forward" id="next-song" onclick="nextSong()"></i>
-        <i class="fas fa-step-backward" id="previous-song" onclick="previousSong()"></i>
+        <div class="albums">
+            <ul>
+                <li>Summering EP</li>
+                <li>At Sea</li>
+            </ul>
+        </div>
         
-        <div class="song-artist">The Girl is a Ghost</div>
+        <i class="fa fa-play fa-2x" aria-hidden="true" id="play-pause" onclick="playPause()"></i>
+        <i class="fas fa-angle-double-right fa-2x" id="next-song" onclick="nextSong()"></i>
+        <i class="fas fa-angle-double-left fa-2x" id="previous-song" onclick="previousSong()"></i>
+        
+        <div class="song-artist">Album-title</div>
         <div class="song-title">Song-title</div>
 
         <input 
